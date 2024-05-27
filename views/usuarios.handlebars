@@ -1,0 +1,20 @@
+<h1>Usuarios Cadastrados</h1>
+
+<a href="/usuarios/novo">cadastrar novo usuário</a>
+
+<table border="1">
+
+    <tr>
+    <td>Id</td>
+    <td>Nome</td>
+    <td>Nickname</td>
+    </tr>
+    {{#each usuarios}}
+    <tr>
+    <td>{{this.id}}</td>
+    <td>{{this.nome}}</td>
+    <td>{{this.nickname}}</td>
+    <td><a href="/usuarios/{{this.id}}/update">Atualizar</a></td>
+    </tr>
+    {{/each}}
+</table>
