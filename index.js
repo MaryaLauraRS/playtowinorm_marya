@@ -46,7 +46,7 @@ app.post("/usuarios/novo", async (req,res)=>{
     const usuario = await Usuario.create(dadosUsuario);
 
     res.send("Usuário inserido sob o id: " + usuario.id);
-})
+});
 
 app.get("/usuarios/:id/update", async (req, res) => {
     const id = parseInt(req.params.id);
@@ -54,7 +54,7 @@ app.get("/usuarios/:id/update", async (req, res) => {
         raw:true
     });
     res.render("formUsuario", {usuario});
-    
+
         //  const usuario = Usuario.findOne({
         //    where: {id:id},
         //    raw: true
